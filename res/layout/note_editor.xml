@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/editor_background"
+                android:orientation="horizontal"
+        >
+    <LinearLayout android:id="@+id/note_blank"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:layout_marginTop="12dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_marginRight="5dp"
+                  android:orientation="vertical"
+                  android:background="@color/lined_edit_background"
+                  android:layout_alignParentTop="true"
+                  android:gravity="top"
+            >
+        <TextView android:id="@+id/time"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@android:color/black"
+                  android:background="@color/lined_edit_title_background"
+                  android:padding="5dp"
+                />
+        <view class="com.codeminders.inotes.ui.LinedEditText"
+              android:id="@+id/note"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="10dp"
+              android:padding="5dp"
+              android:scrollbars="vertical"
+              android:fadingEdge="vertical"
+              android:gravity="top"
+              android:background="@color/lined_edit_background"
+              android:textSize="18.0sp"
+              android:textColor="@color/text_color"
+              android:capitalize="sentences"
+              android:autoLink="none"
+              android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+              android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+                />
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent"
+          android:layout_height="5dip"
+          android:background="@drawable/shadow_horizontal"
+          android:layout_alignBottom="@id/note_blank"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="3dp"
+          android:layout_marginBottom="-5dp"
+            />
+
+    <View android:layout_width="5dip"
+          android:layout_height="fill_parent"
+          android:background="@drawable/shadow_vertical_right"
+          android:layout_alignRight="@id/note_blank"
+          android:layout_marginTop="17dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginRight="-5dp"
+            />
+
+    <View android:layout_width="5dip"
+          android:layout_height="fill_parent"
+          android:background="@drawable/shadow_vertical_left"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="17dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginLeft="5dp"
+            />
+</RelativeLayout>

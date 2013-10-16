@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sync_settings_title"/>
+    <PreferenceScreen android:key="account_settings"
+                      android:title="@string/sync_settings"
+                      android:summary="@string/sync_settings_msg">
+        <intent android:targetPackage="com.codeminders.inotes"
+                android:targetClass="com.codeminders.inotes.ui.SettingsActivity"/>
+    </PreferenceScreen>
+</PreferenceScreen>

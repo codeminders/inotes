@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <TextView android:id="@+id/account_list_item_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/text_color"
+              android:singleLine="true"
+              android:textStyle="bold"
+              android:layout_marginBottom="15dp"
+              android:layout_marginTop="15dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+            />
+    <TextView android:id="@+id/account_notes_count"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/text_color"
+              android:singleLine="true"
+              android:textStyle="bold"
+              android:layout_marginRight="10dp"
+              android:layout_marginBottom="15dp"
+              android:layout_marginTop="15dp"
+              android:gravity="right"
+            />
+</LinearLayout>  

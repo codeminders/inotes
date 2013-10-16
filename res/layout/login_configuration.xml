@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/editor_background">
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:padding="10dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textStyle="bold"
+                      android:textColor="@color/text_color"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="IMAP server"/>
+            <EditText android:id="@+id/imap_server_edit"
+                      android:singleLine="true"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:minWidth="250dip"
+                      android:scrollHorizontally="true"
+                      android:capitalize="none"
+                      android:autoText="false"
+                      android:inputType="text"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textStyle="bold"
+                      android:singleLine="true"
+                      android:textColor="@color/text_color"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="IMAP port"/>
+            <EditText android:id="@+id/imap_port_edit"
+                      android:singleLine="true"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:minWidth="250dip"
+                      android:scrollHorizontally="true"
+                      android:capitalize="none"
+                      android:autoText="false"
+                      android:inputType="textEmailAddress"/>
+            <CheckBox android:id="@+id/useSSL_checkbox"
+                      android:text="@string/useSSL_checkbox"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:textColor="@color/text_color"
+                      android:textStyle="bold"
+                    />
+            <TextView android:id="@+id/message_bottom"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/text_color"
+                      android:layout_marginBottom="5dip"/>
+            <Button android:id="@+id/config_ok_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:minWidth="100dip"
+                    android:text="@string/login_activity_ok_button"
+                    android:onClick="handleLogin"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

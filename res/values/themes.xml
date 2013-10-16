@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Main">
+        <item name="android:windowTitleSize">40dip</item>
+        <item name="android:windowTitleBackgroundStyle">@style/title_background</item>
+        <item name="android:windowTitleStyle">@style/title_style</item>
+    </style>
+</resources>

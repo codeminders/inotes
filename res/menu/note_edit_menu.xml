@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menu_group_edit">
+        <item android:id="@+id/menu_delete"
+              android:icon="@drawable/ic_menu_delete"
+              android:title="@string/menu_delete"/>
+        <item android:id="@+id/menu_move"
+              android:icon="@drawable/ic_menu_move"
+              android:title="@string/menu_move"/>
+        <item android:id="@+id/menu_share"
+              android:icon="@drawable/ic_menu_share"
+              android:title="@string/menu_share"/>
+    </group>
+    <item android:id="@+id/menu_discard"
+          android:icon="@drawable/ic_menu_discard"
+          android:title="@string/menu_discard"/>
+</menu>

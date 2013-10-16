@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">iNotes</string>
+    <string name="notes">notes:</string>
+    <string name="accounts">Accounts:</string>
+
+    <string name="title_edit_title">Note title:</string>
+    <string name="title_create">Create note</string>
+    <string name="title_edit">Edit: \"%1$s\"</string>
+    <string name="title_notes_list">Notes</string>
+    
+    <string name="menu_add">Add note</string>
+    <string name="menu_add_account">Add account</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_delete_all">Delete all</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_discard">Discard</string>
+    <string name="menu_move">Move</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_reload">Sync</string>
+    
+    <string name="button_ok">OK</string>  
+    <string name="text_title">Title:</string>
+    
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+    
+    <string name="error_title">Error</string>
+    <string name="error_message">Error loading note</string>
+    <string name="nothing_to_save">There is nothing to save. Quit without saving?</string>
+    <string name="empty_title">Title cant be empty</string>
+
+    <string name="notes_empty">No notes in this account</string>
+    <string name="actions">Actions:</string>
+
+    <string name="ACCOUNT_TYPE">codeminders.inotes</string>
+    <string name="login_activity_ok_button">Sign in</string>
+    <string name="login_activity_password_label">Password</string>
+    <string name="login_activity_username_label">Username</string>
+    <string name="login_activity_newaccount_text">Configure your imap account.</string>
+    <string name="login_activity_loginfail_text_email_missing">Type the email for this account.</string>
+    <string name="login_activity_loginfail_text_both">Incorrect configuration. Please try again.</string>
+    <string name="login_activity_loginfail_text_pwmissing">Type the password for this account.</string>
+    <string name="login_activity_loginfail_text_host_missing">Type the server for this account.</string>
+    <string name="login_activity_loginfail_text_port_missing">Type the port for this account.</string>
+    <string name="login_activity_loginfail_text_pwonly">You entered the wrong password or your account has changed.
+        Please re-enter your password.
+    </string>
+    <string name="ui_activity_authenticating">Authenticating\u2026</string>
+
+    <string name="local_account">Local</string>
+    <string name="add_account">Add account</string>
+
+    <string name="sync_settings">Sync Settings</string>
+    <string name="sync_settings_msg">Configure synchronization</string>
+    <string name="sync_settings_title">General Settings</string>
+    <string name="wifi_checkbox">Sync only over wifi</string>
+    <string name="sync_interval">AutoSync interval</string>
+    <string name="save">Save</string>
+    <string name="save_to">Choose account:</string>
+
+    <string name="time_5_min">5 min</string>
+    <string name="time_15_min">15 min</string>
+    <string name="time_30_min">30 min</string>
+    <string name="time_1_hour">1 hour</string>
+    <string name="time_2_hours">2 hours</string>
+    <string name="time_4_hours">4 hours</string>
+    <string name="time_8_hours">8 hours</string>
+    <string name="time_12_hours">12 hours</string>
+    <string name="time_24_hours">24 hours</string>
+
+    <string name="conf_save">Configuration saved</string>
+    <string name="share">Share</string>
+    <string name="share_signature">Sent with iNotes</string>
+    <string name="useSSL_checkbox">Use SSL</string>
+    <string name="empty_fields">Some fields are empty</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="location">Move to</string>
+    <string name="authorities">com.codeminders.notes</string>
+    <string name="all_notes">All notes:</string>
+    <string name="menu_choose_account">Choose account</string>
+    <string name="all_accounts">All</string>
+    <string name="deleting">Deleting...</string>
+    <string name="saved">Saved</string>
+
+    <string name="sync_in_progress">Sync in Progress</string>
+    <string name="wait_for_sync">Waiting for sync</string>
+    <string name="nothing_to_share">Nothing to share</string>
+</resources>
