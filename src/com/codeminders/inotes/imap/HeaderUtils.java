@@ -18,7 +18,8 @@ public class HeaderUtils {
         IDENTIFIER("X-Universally-Unique-Identifier"),
         NOTE_TYPE("X-Uniform-Type-Identifier"),
         CREATED_DATE("X-Mail-Created-Date"),
-        DEFAULT_NOTE_TYPE("com.apple.mail-note");
+        DEFAULT_NOTE_TYPE("com.apple.mail-note"),
+		CONTENT_TYPE("Content-Type");
 
         private String name;
 
@@ -47,6 +48,11 @@ public class HeaderUtils {
         if (inoteId != null) {
             headers.put(INOTES_ID_HEADER, inoteId[0]);
         }
+
+		String[] contentType = message.getHeader(AppleHeaders.CONTENT_TYPE.toString());
+		if (contentType != null) {
+			headers.put(AppleHeaders.CONTENT_TYPE.toString(), contentType[0]);
+		}
 
         return headers;
     }
