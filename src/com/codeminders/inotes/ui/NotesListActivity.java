@@ -134,9 +134,9 @@ public class NotesListActivity extends Activity implements OnItemClickListener, 
         }).start();
     }
 
-    public Handler handler = new Handler() {
+    public Handler handler = new Handler(new Handler.Callback() { 
         @Override
-        public void handleMessage(Message msg) {
+        public boolean handleMessage(Message msg) {
             if (msg.what == 0) {
                 loadNoteList();
             }
@@ -155,8 +155,9 @@ public class NotesListActivity extends Activity implements OnItemClickListener, 
                 layout.getChildAt(1).setVisibility(View.INVISIBLE);
                 layout.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
             }
+            return true;
         }
-    };
+    });
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -37,7 +37,7 @@
               android:background="@color/lined_edit_background"
               android:textSize="18.0sp"
               android:textColor="@color/text_color"
-              android:inputType="textCapSentences"
+              android:inputType="textMultiLine"
               android:autoLink="none"
               android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
               android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
