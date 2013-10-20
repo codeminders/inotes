@@ -90,14 +90,16 @@ public class AccountsListActivity extends Activity implements OnItemClickListene
         }).start();
     }
 
-    public Handler handler = new Handler() {
+    public Handler handler = new Handler(new Handler.Callback() {
+        
         @Override
-        public void handleMessage(Message msg) {
+        public boolean handleMessage(Message msg) {
             if (msg.what == 0) {
                 loadAccountsList();
             }
+            return true;
         }
-    };
+    });
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -141,9 +143,9 @@ public class AccountsListActivity extends Activity implements OnItemClickListene
                                     for (Account account : accounts) {
                                         if (account.name.equals(accountName)) {
                                             final DBManager dbManager = new DBManager(AccountsListActivity.this);
-                                            final Handler handler = new Handler() {
+                                            final Handler handler = new Handler(new Handler.Callback() {
                                                 @Override
-                                                public void handleMessage(Message msg) {
+                                                public boolean handleMessage(Message msg) {
                                                     try {
                                                         dbManager.deleteAccount(accountName);
                                                         loadAccountsList();
@@ -151,8 +153,9 @@ public class AccountsListActivity extends Activity implements OnItemClickListene
                                                     } catch (Exception e) {
                                                         Log.e(Constants.TAG, e.getMessage());
                                                     }
+                                                    return true;
                                                 }
-                                            };
+                                            });
                                             showDialog(1);
                                             accountManager.removeAccount(account, new AccountManagerCallback<Boolean>() {
                                                 public void run(AccountManagerFuture<Boolean> future) {
