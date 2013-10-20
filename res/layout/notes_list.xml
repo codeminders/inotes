@@ -6,7 +6,7 @@
               android:background="@color/scrollbar_track_start_color">
     <RelativeLayout android:id="@+id/sync_layout"
                     android:layout_width="fill_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="1dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="5dp"

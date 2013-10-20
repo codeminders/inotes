@@ -15,7 +15,7 @@
                       android:textColor="@color/text_color"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:text="Email:"/>
+                      android:text="@string/login_activity_email_text"/>
             <EditText android:id="@+id/username_edit"
                       android:singleLine="true"
                       android:layout_width="fill_parent"

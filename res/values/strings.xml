@@ -31,7 +31,7 @@
     <string name="error_title">Error</string>
     <string name="error_message">Error loading note</string>
     <string name="nothing_to_save">There is nothing to save. Quit without saving?</string>
-    <string name="empty_title">Title cant be empty</string>
+    <string name="empty_title">Title can\'t be empty</string>
 
     <string name="notes_empty">No notes in this account</string>
     <string name="actions">Actions:</string>
@@ -85,10 +85,13 @@
     <string name="all_notes">All notes:</string>
     <string name="menu_choose_account">Choose account</string>
     <string name="all_accounts">All</string>
-    <string name="deleting">Deleting...</string>
+    <string name="deleting">Deleting&#8230;</string>
     <string name="saved">Saved</string>
 
     <string name="sync_in_progress">Sync in Progress</string>
     <string name="wait_for_sync">Waiting for sync</string>
     <string name="nothing_to_share">Nothing to share</string>
+    <string name="login_activity_email_text">Email:</string>
+    <string name="login_config_IMAP_port_text">IMAP port</string>
+    <string name="login_config_IMAP_server_text">IMAP server</string>
 </resources>
