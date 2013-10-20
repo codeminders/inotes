@@ -10,8 +10,7 @@ import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
+import android.os.*;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -219,7 +218,34 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity
         {
             try
             {
-                Record[] records = new Lookup(host, Type.MX).run();
+                class MXLookup extends AsyncTask<String, Void, Record[]>
+                {
+                    private Exception exception;
+
+                    protected Record[] doInBackground(String... host)
+                    {
+                        try
+                        {
+                            return new Lookup(host[0], Type.MX).run();
+                        } catch(Exception e)
+                        {
+                            this.exception = e;
+                            return null;
+                        }
+                    }
+
+                    public Exception getException()
+                    {
+                        return exception;
+                    }
+                }
+
+                MXLookup lookup_task = (MXLookup) new MXLookup().execute(host);
+                Exception loookup_exception = lookup_task.getException();
+                if(loookup_exception != null)
+                    throw loookup_exception;
+
+                Record[] records = lookup_task.get();
                 if(records == null)
                 {
                     return false;
