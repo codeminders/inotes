@@ -361,7 +361,7 @@ public class NotesListActivity extends Activity implements OnItemClickListener, 
                 TextView emptyNotes = new TextView(NotesListActivity.this);
                 emptyNotes.setText(getString(R.string.notes_empty));
                 emptyNotes.setId(EMPTY_NOTES_ID);
-                emptyNotes.setTextColor(R.color.text_color);
+                emptyNotes.setTextColor(getResources().getColor(R.color.text_color));
                 emptyNotes.setPadding(10, 0, 0, 0);
 
                 linearLayout.addView(emptyNotes);
