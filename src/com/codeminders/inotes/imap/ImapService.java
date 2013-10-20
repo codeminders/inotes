@@ -156,15 +156,15 @@ public class ImapService extends ImapSession {
     }
 
     private String getNoteBody(Message message) throws Exception {
-        if (message.getContentType().toLowerCase().startsWith("text/plain") || message.getContentType().toLowerCase().startsWith("text/html")) {
+        if (message.getContentType().toLowerCase(Locale.ENGLISH).startsWith("text/plain") || message.getContentType().toLowerCase(Locale.ENGLISH).startsWith("text/html")) {
             return (String) message.getContent();
-        } else if (message.getContentType().toLowerCase().startsWith("multipart/")) {
+        } else if (message.getContentType().toLowerCase(Locale.ENGLISH).startsWith("multipart/")) {
             MimeMultipart multipart = (MimeMultipart) message.getContent();
             for (int i = 0; i < multipart.getCount(); i++) {
                 BodyPart bodyPart = multipart.getBodyPart(i);
-                if (bodyPart.getContentType().toLowerCase().startsWith("text/plain")) {
+                if (bodyPart.getContentType().toLowerCase(Locale.ENGLISH).startsWith("text/plain")) {
                     return (String) bodyPart.getContent();
-                } else if (bodyPart.getContentType().toLowerCase().startsWith("text/html")) {
+                } else if (bodyPart.getContentType().toLowerCase(Locale.ENGLISH).startsWith("text/html")) {
                     return Html.fromHtml((String) bodyPart.getContent()).toString();
                 }
             }
