@@ -22,8 +22,6 @@
                       android:layout_height="wrap_content"
                       android:minWidth="250dip"
                       android:scrollHorizontally="true"
-                      android:capitalize="none"
-                      android:autoText="false"
                       android:inputType="text"/>
             <TextView android:textAppearance="?android:attr/textAppearanceSmall"
                       android:textStyle="bold"
@@ -38,9 +36,7 @@
                       android:layout_height="wrap_content"
                       android:minWidth="250dip"
                       android:scrollHorizontally="true"
-                      android:capitalize="none"
-                      android:autoText="false"
-                      android:inputType="textEmailAddress"/>
+                      android:inputType="number"/>
             <CheckBox android:id="@+id/useSSL_checkbox"
                       android:text="@string/useSSL_checkbox"
                       android:layout_width="wrap_content"
