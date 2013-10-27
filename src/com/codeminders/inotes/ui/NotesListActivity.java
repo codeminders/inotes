@@ -24,8 +24,8 @@ import com.codeminders.inotes.model.Note;
 import com.codeminders.inotes.sync.SyncHelper;
 
 public class NotesListActivity extends Activity implements OnItemClickListener, OnItemLongClickListener {
-    private final static String TIME_FORMAT12 = "MM/dd/yy hh:mmaa";
-    private final static String TIME_FORMAT24 = "MM/dd/yy kk:mm";
+    private final static String TIME_FORMAT12 = "hh:mmaa";
+    private final static String TIME_FORMAT24 = "kk:mm";
     private static final int ACTION_DIALOG = 0;
     private static final int CHANGE_TITLE_DIALOG = 1;
     private static final int EMPTY_TITLE_DIALOG = 2;
@@ -403,11 +403,15 @@ public class NotesListActivity extends Activity implements OnItemClickListener, 
 
         for (Note note : notes) {
             map = new HashMap<String, Object>();
-            if (DateFormat.is24HourFormat(this)) {
-                map.put("time", DateFormat.format(TIME_FORMAT24, note.getDate()));
-            } else {
-                map.put("time", DateFormat.format(TIME_FORMAT12, note.getDate()));
-            }
+            java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
+            Date date = note.getDate();
+            String dates = dateFormat.format(date);
+            if (DateFormat.is24HourFormat(this)) 
+                dates = dates + " " + DateFormat.format(TIME_FORMAT24, date);
+            else
+                dates = dates + " " + DateFormat.format(TIME_FORMAT12, date);
+
+            map.put("time", dates);
             map.put("title", note.getTitle());
 
             items.add(map);
