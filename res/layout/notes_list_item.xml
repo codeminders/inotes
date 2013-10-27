@@ -17,7 +17,6 @@
                   android:singleLine="true"
                   android:textStyle="bold"
                   android:layout_alignParentBottom="true"
-                  android:layout_below="@+id/list_item_time"
                   android:layout_toLeftOf="@+id/list_item_time"
                 />
 </RelativeLayout>
